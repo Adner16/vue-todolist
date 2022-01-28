@@ -13,3 +13,11 @@ li{
     list-style-type: none;
     padding: 5px;
 }
+
+.linethrough{
+    text-decoration: line-through;
+}
+
+input{
+    width: 500px;
+}
