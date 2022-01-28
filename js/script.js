@@ -24,6 +24,9 @@ const app = new Vue({
             };
             this.todo.push(item);
             this.newItem = '';
+        },
+        toggleDone(index){
+            this.todo[index].done = !this.todo[index].done;
         }
     }
 })

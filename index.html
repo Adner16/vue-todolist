@@ -24,15 +24,15 @@
               </div>
             </div>
             <div class="d-flex my-3">
-                <input type="text" class="ml-5 mr-2 my-4" v-model='newItem{}'>
-                <button v-mo @click='addItem' class="btn-primary d-flex align-self-center">AGGIUNGI</button>
+                <input type="text" class="ml-5 mr-2 my-4" v-model='newItem'>
+                <button @click='addItem' class="btn-primary d-flex align-self-center">AGGIUNGI</button>
             </div>
             <div class="ul-container">
                 <ul>
                     <li v-for='(item, index) in todo' class="d-flex justify-content-between">
                         <div>
-                            <span><i class="mx-2 far fa-check-square"></i>
-                            </span> <span :class="{linethrough: item.done}">{{item.text}}</span>
+                            <span><i class="mx-2 far fa-check-square"></i></span>
+                            <span @click='toggleDone(index)' :class="{linethrough: item.done}">{{item.text}}</span>
                         </div>
                         <span><i @click='deleteItem(index)' class="fas fa-times mx-2"></i></span>
                     </li>
