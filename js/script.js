@@ -5,7 +5,7 @@ Vue.config.devtools = true;
 const app = new Vue({
     el: '#root',
     data: {
-        newItem: {},
+        newItem: '',
         todo: [
             {text: 'fare la spesa', done: true},
             {text: 'andare in palestra', done: false},
@@ -18,6 +18,12 @@ const app = new Vue({
        deleteItem(index){
            this.todo.splice(index,1);
         },
-        addItem(){}
+        addItem(){
+            const item = {
+                text: this.newItem, done: false
+            };
+            this.todo.push(item);
+            this.newItem = '';
+        }
     }
 })
