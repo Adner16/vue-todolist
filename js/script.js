@@ -5,6 +5,7 @@ Vue.config.devtools = true;
 const app = new Vue({
     el: '#root',
     data: {
+        newItem: {},
         todo: [
             {text: 'fare la spesa', done: true},
             {text: 'andare in palestra', done: false},
